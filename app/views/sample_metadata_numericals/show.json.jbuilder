@@ -1,0 +1,1 @@
+json.partial! "sample_metadata_numericals/sample_metadata_numerical", sample_metadata_numerical: @sample_metadata_numerical

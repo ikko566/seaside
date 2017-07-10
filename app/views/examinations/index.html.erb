@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Examinations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Examination Title</th>
+      <th>define date</th>
+      <th>#sample</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @samples.each do |sample| %>
+      <tr>
+        <td><%= link_to sample.title,  project_examination_sample_path(@project_id, sample.examination_id, sample.id)  %></td>
+        <td><%=  sample.define_at %></td>
+        <td><%#= @nsample  %></td>
+        <td><%= link_to 'Show', project_examination_samples_path(@project_id, sample.examination_id, sample.id) %></td>
+        <td><%= link_to 'Edit', edit_project_examination_sample_path(:project_id, :id, sample.id) %></td>  
+        <td><%#= link_to 'Destroy', examination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'New Examination', new_examination_path %>
+<%= link_to 'Project', projects_path %>

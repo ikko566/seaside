@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  examination: one
+  title: MyString
+  datetime: 
+
+two:
+  examination: two
+  title: MyString
+  datetime: 

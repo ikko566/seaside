@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Examination:</strong>
+  <%= @sample.examination %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @sample.title %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @sample.define_at %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> predicate_numerical</th>
+      <th> value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sample_metadata_numerical.each do |numerical| %>
+      <tr>
+        <td><%= numerical.predicate_numerical %></td>
+        <td><%= numerical.value %></td>
+<!--
+        <td><%#= link_to 'Show', sample %></td>
+        <td><%#= link_to 'Edit', edit_sample_path(sample) %></td>
+        <td><%#= link_to 'Destroy', sample, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%#= link_to 'Edit', edit_sample_path(@sample) %> |
+<%#= link_to 'Back', samples_path %>
+
+<%= link_to 'examinations' ,project_examinations_path(params[:examination_id]) %>
+<%= link_to 'project' ,projects_path %>
+

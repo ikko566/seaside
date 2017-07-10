@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Predicate Numericals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Unit</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Sample metadata numerical</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @predicate_numericals.each do |predicate_numerical| %>
+      <tr>
+        <td><%= predicate_numerical.name %></td>
+        <td><%= predicate_numerical.unit %></td>
+        <td><%= predicate_numerical.min %></td>
+        <td><%= predicate_numerical.max %></td>
+        <td><%= predicate_numerical.sample_metadata_numerical %></td>
+        <td><%= link_to 'Show', predicate_numerical %></td>
+        <td><%= link_to 'Edit', edit_predicate_numerical_path(predicate_numerical) %></td>
+        <td><%= link_to 'Destroy', predicate_numerical, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Predicate Numerical', new_predicate_numerical_path %>

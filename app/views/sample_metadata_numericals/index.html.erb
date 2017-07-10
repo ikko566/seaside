@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sample Metadata Numericals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Predicate numerical</th>
+      <th>Value</th>
+      <th>Sample</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sample_metadata_numericals.each do |sample_metadata_numerical| %>
+      <tr>
+        <td><%= sample_metadata_numerical.predicate_numerical %></td>
+        <td><%= sample_metadata_numerical.value %></td>
+        <td><%= sample_metadata_numerical.sample %></td>
+        <td><%= link_to 'Show', sample_metadata_numerical %></td>
+        <td><%= link_to 'Edit', edit_sample_metadata_numerical_path(sample_metadata_numerical) %></td>
+        <td><%= link_to 'Destroy', sample_metadata_numerical, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sample Metadata Numerical', new_sample_metadata_numerical_path %>

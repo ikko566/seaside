@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @predicate_numerical.name %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @predicate_numerical.unit %>
+</p>
+
+<p>
+  <strong>Min:</strong>
+  <%= @predicate_numerical.min %>
+</p>
+
+<p>
+  <strong>Max:</strong>
+  <%= @predicate_numerical.max %>
+</p>
+
+<p>
+  <strong>Sample metadata numerical:</strong>
+  <%= @predicate_numerical.sample_metadata_numerical %>
+</p>
+
+<%= link_to 'Edit', edit_predicate_numerical_path(@predicate_numerical) %> |
+<%= link_to 'Back', predicate_numericals_path %>

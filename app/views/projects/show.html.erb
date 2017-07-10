@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Alias:</strong>
+  <%= @project.alias %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+  <strong>Publication:</strong>
+  <%= @project.publication %>
+</p>
+
+<p>
+  <strong>Expermien:</strong>
+  <%= @project.expermien_id %>
+</p>
+
+<p>
+  <strong>Analysis:</strong>
+  <%= @project.analysis_id %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @project.client_id %>
+</p>
+
+<p>
+  <strong>Collector:</strong>
+  <%= @project.collector_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @project.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

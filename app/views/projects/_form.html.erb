@@ -1,0 +1,62 @@
+<%= form_with(model: project, local: true) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :alias %>
+    <%= form.text_field :alias, id: :project_alias %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :project_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :project_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publication %>
+    <%= form.text_field :publication, id: :project_publication %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expermien_id %>
+    <%= form.text_field :expermien_id, id: :project_expermien_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :analysis_id %>
+    <%= form.text_field :analysis_id, id: :project_analysis_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_id %>
+    <%= form.text_field :client_id, id: :project_client_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :collector_id %>
+    <%= form.text_field :collector_id, id: :project_collector_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :project_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

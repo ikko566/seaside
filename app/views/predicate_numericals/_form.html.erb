@@ -1,0 +1,42 @@
+<%= form_with(model: predicate_numerical, local: true) do |form| %>
+  <% if predicate_numerical.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(predicate_numerical.errors.count, "error") %> prohibited this predicate_numerical from being saved:</h2>
+
+      <ul>
+      <% predicate_numerical.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :predicate_numerical_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unit %>
+    <%= form.text_field :unit, id: :predicate_numerical_unit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min %>
+    <%= form.text_field :min, id: :predicate_numerical_min %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max %>
+    <%= form.text_field :max, id: :predicate_numerical_max %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sample_metadata_numerical_id %>
+    <%= form.text_field :sample_metadata_numerical_id, id: :predicate_numerical_sample_metadata_numerical_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

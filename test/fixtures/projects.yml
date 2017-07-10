@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alias: MyString
+  title: MyString
+  description: MyString
+  publication: MyString
+  expermien_id: MyString
+  analysis_id: MyString
+  client_id: 9.99
+  collector_id: 9.99
+  user_id: 9.99
+
+two:
+  alias: MyString
+  title: MyString
+  description: MyString
+  publication: MyString
+  expermien_id: MyString
+  analysis_id: MyString
+  client_id: 9.99
+  collector_id: 9.99
+  user_id: 9.99
