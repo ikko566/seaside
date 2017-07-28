@@ -5,7 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Examination Title</th>
+      <th>sample Title</th>
+      <th>sample id</th>
+
       <th>define date</th>
       <th>#sample</th>
       <th colspan="3"></th>
@@ -16,6 +18,7 @@
     <% @samples.each do |sample| %>
       <tr>
         <td><%= link_to sample.title,  project_examination_sample_path(@project_id, sample.examination_id, sample.id)  %></td>
+        <td><%= sample.id  %></td>
         <td><%=  sample.define_at %></td>
         <td><%#= @nsample  %></td>
         <td><%= link_to 'Show', project_examination_samples_path(@project_id, sample.examination_id, sample.id) %></td>
@@ -30,3 +33,12 @@
 
 <%#= link_to 'New Examination', new_examination_path %>
 <%= link_to 'Project', projects_path %>
+
+<br>
+<br>
+
+<!-- ページの一番下に追加 -->
+<%= form_tag import_examinations_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "インポート" %>
+<% end %>

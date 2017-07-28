@@ -21,6 +21,12 @@ class ProjectsController < ApplicationController
   def edit
   end
 
+  def import
+    Project.import(params[:file])
+    redirect_to "/projects"
+#     redirect_to root_url, notice:"インポート完了しました"
+  end
+
   # POST /projects
   # POST /projects.json
   def create

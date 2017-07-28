@@ -20,6 +20,12 @@ s3=e2.samples.create(  :title => '健康診断002 2/2', :define_at => '2015/5/7 
 s2.sample_metadata_numerical.create( :predicate_numerical => '大腸菌002 1/1', :value => '13.5' )
 s3.sample_metadata_numerical.create( :predicate_numerical => '大腸菌003 1/2', :value => '13.5' )
 s3.sample_metadata_numerical.create( :predicate_numerical => '大腸菌004 2/2', :value => '13.5' )
+p3=Project.create( :alias => 'ビフィダス×睡眠003', :title => '寝てる人003', :description => 'プロジェクトの説明', :publication => 'Ver000.001')
+e3=p3.examinations.create( :project_id => 3)
+s4=e3.samples.create(  :title => '定期検診004 1/3', :define_at => '2015/4/3 10:40' )
+s5=e3.samples.create(  :title => '検診005 2/3', :define_at => '2015/4/3 10:40' )
+s6=e3.samples.create(  :title => 'アンケート006 3/3', :define_at => '2015/4/3 10:40' )
+s4.sample_metadata_numerical.create( :predicate_numerical => '大腸菌002 1/1', :value => '100.00000000000005' )
 
 #Project.create( :alias => '睡眠×大腸菌002',         :title => '大腸菌影響002', :description => 'プロジェクトの説明', :publication => 'Ver001')
 #Project.create( :alias => '別名004', :title => 'タイトル004', :description => 'プロジェクトの説明', :publication => 'Ver001')

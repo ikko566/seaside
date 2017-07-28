@@ -6,7 +6,8 @@
   <thead>
     <tr>
       <th>Alias</th>
-      <th>Examination Title</th>
+      <th>Project Title</th>
+      <th>project_id</th>
       <th># of samples</th>
       <th>Description</th>
       <th>Publication</th>
@@ -26,6 +27,7 @@
         <td><%= link_to project.title, project_examinations_path(project.id)  %></td>
 
         <td><%= project.id %></td>
+        <td><%= project.id %></td>
 
         <td><%= project.description %></td>
         <td><%= project.publication %></td>
@@ -42,6 +44,11 @@
   </tbody>
 </table>
 
+<br>
+<%= form_tag({controller: "projects", action: "import", method: "post"}, {multipart: true}) do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "データを一括インポート" %>
+<% end %>
 <br>
 
 <%= link_to 'New Project', new_project_path %>

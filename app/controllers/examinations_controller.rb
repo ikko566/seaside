@@ -30,6 +30,15 @@ class ExaminationsController < ApplicationController
   def edit
   end
 
+  def import
+  # fileはtmpに自動で一時保存される
+      Examination.import(params[:file])
+#      redirect_to root_url, notice: "sampleを追加しました。"
+      redirect_to "/examinations"
+  end
+
+
+
   #GET number of sample
   #  def sample_count
   #       @examinations=Examination.where(  )
